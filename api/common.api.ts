@@ -1,6 +1,4 @@
-const API_URL = "https://api.staging.mywheels.my/graphql/"
-
-export async function fetchAPI(query, { variables, preview } = {}) {
+export async function fetchAPI(query: string, { variables } = { variables: {} }) {
   const res = await fetch(process.env.GRAPHQL_URL, {
     method: "POST",
     headers: {
