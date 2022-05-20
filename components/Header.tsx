@@ -52,7 +52,7 @@ export default function Header() {
 
       if(pathname !== `/${url}`){
         listOfMenuComponent.push(
-          <Dropdown.Item href={url}>{name}</Dropdown.Item>
+          <Dropdown.Item key={url} href={url}>{name}</Dropdown.Item>
         )
       }
     }
