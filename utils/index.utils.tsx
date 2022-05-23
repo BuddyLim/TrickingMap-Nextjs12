@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import Image from "next/image";
+import Image from 'next/image'
 import { IndexArticleItem } from "../styles/index.emotion";
 
 export const displayArticleTitles = (allArticles) => {
@@ -10,7 +10,7 @@ export const displayArticleTitles = (allArticles) => {
   return allArticles.map((articleObj) => {
     if(articleObj && articleObj?.node){
       const { title, slug, coverImageWithText } = articleObj.node;
-      return (
+      return (  
         <li key={slug} css={IndexArticleItem}>
           <Image
             src={`${process.env.NEXT_PUBLIC_S3_BUCKET}${coverImageWithText?.file}`}
@@ -27,3 +27,4 @@ export const displayArticleTitles = (allArticles) => {
     }
   });
 };
+
