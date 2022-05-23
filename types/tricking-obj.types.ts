@@ -13,13 +13,17 @@ export type TrickType = {
   uri: string,
   prerequisites: Array<number>
   progressesTo: Array<number>
+  image: string
 }
 
 export type TrickingCardPropsType = {
   key: number,
   isControlVisible: object,
   setControlVisible: React.Dispatch<React.SetStateAction<object>>,
-  setSelectedTrick: React.Dispatch<React.SetStateAction<object>>,
+  progressionTrick: TrickType,
+  selectedTrick: TrickType,
+  setSelectedTrick: React.Dispatch<React.SetStateAction<TrickType>>,
   setShowOffCanvas: React.Dispatch<React.SetStateAction<boolean>>,
-  trick: TrickType
+  trick: TrickType,
+  isProgressionVisible: boolean
 }

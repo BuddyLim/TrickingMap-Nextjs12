@@ -6,7 +6,7 @@ export const TrickCardStyle = css`
   transition: 0.1s;
 
   &:hover{
-    box-shadow: 0 0 0 2px green;
+    box-shadow: 0 0 0 7px green;
   }
 ` 
 
@@ -17,10 +17,21 @@ export const TrickVideoStyle = css`
   cursor: pointer;
 `
 
+export const TrickRowListStyle = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const TrickRowTitleStyle = css`
+  font-size: 48px;
+  font-weight: bold;
+`
+
 export const TrickRowLayoutStyle = css`
   display: flex;
   flex-direction: row;
-  max-width: 2000px;
+  width: 2000px;
   flex-wrap: wrap;
   gap: 3%;
   justify-content: center;
